@@ -1,0 +1,16 @@
+{
+  "name": "play_reviews",
+  "version": "1.0.0",
+  "description": "PlayStore Reviews Analyser",
+  "main": "script.py",
+  "license": "MIT",
+  "scripts": {
+    "scrape": "node scraper/scrape_reviews.js",
+    "scrape:force": "node scraper/scrape_reviews.js --force"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "luxon": "^3.5.0"
+  }
+}

@@ -1,0 +1,6 @@
+.venv/
+node_modules/
+reviews/*.json
+.env
+__pycache__/
+*.pyc

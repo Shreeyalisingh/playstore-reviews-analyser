@@ -1,0 +1,51 @@
+:root { --bg: #0f172a; --card: #111827; --fg: #e5e7eb; --muted:#94a3b8; --accent:#22d3ee; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto; background: var(--bg); color: var(--fg); }
+.container { max-width: 1100px; margin: 32px auto; padding: 0 16px; }
+h1 { font-size: 28px; margin-bottom: 16px; }
+.card { background: linear-gradient(180deg, rgba(34,211,238,0.07), transparent), var(--card); border: 1px solid #1f2937; border-radius: 12px; padding: 16px; margin-bottom: 24px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+.stat { padding: 12px; background: #0b1220; border: 1px solid #1f2937; border-radius: 10px; }
+.stat h4 { margin: 0 0 6px 0; color: var(--muted); font-weight: 600; }
+.stat .num { font-size: 22px; color: var(--accent); }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px; border-bottom: 1px solid #1f2937; vertical-align: top; }
+th { text-align: left; color: var(--muted); font-weight: 600; }
+tbody tr:hover { background: rgba(34,211,238,0.05); }
+pre { white-space: pre-wrap; color: var(--muted); }
+
+/* Controls layout */
+.controls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  align-items: start;
+}
+.control label { display:block; margin-bottom: 6px; color: var(--muted); }
+.control input[type="date"], .control select {
+  width: 100%;
+  background: #0b1220; color: var(--fg);
+  border: 1px solid #1f2937; border-radius: 8px;
+  padding: 8px;
+}
+.control small { color: var(--muted); }
+.control.buttons { display:flex; gap:10px; align-items:flex-end; }
+button {
+  padding: 10px 14px; border-radius: 10px; border: 1px solid #1f2937;
+  background: #0b1220; color: var(--fg); cursor: pointer;
+}
+button:hover { background: rgba(34,211,238,0.08); }
+button.secondary { opacity: 0.8; }
+#charts .card { margin-bottom: 24px; }
+/* Make charts smaller */
+#charts canvas {
+  max-width: 400px;
+  max-height: 250px;
+  margin: 0 auto;
+  display: block;
+}
+#charts .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

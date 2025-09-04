@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PlayStore Reviews Analyser</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/static/styles.css" />
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>PlayStore Reviews Analyser</h1>
+
+    <!-- Controls -->
+    <section id="controls">
+      <div class="card">
+        <h3>Filters</h3>
+        <div class="controls-grid">
+          <div class="control">
+            <label for="fromDate">From date</label>
+            <input type="date" id="fromDate" />
+          </div>
+          <div class="control">
+            <label for="toDate">To date</label>
+            <input type="date" id="toDate" />
+          </div>
+          <div class="control">
+            <label for="categorySelect">Category</label>
+            <select id="categorySelect" multiple size="5">
+              <option value="Crashes">Crashes</option>
+              <option value="Bugs">Bugs</option>
+              <option value="Complaints">Complaints</option>
+              <option value="Praises">Praises</option>
+              <option value="Other">Other</option>
+            </select>
+            <small>Tip: Ctrl/Cmd+click for multi-select</small>
+          </div>
+          <div class="control buttons">
+            <button id="applyBtn">Apply Filters</button>
+            <button id="resetBtn" class="secondary">Reset</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary -->
+    <section id="summary">
+      <div class="card">
+        <h3>Summary</h3>
+        <pre id="meta"></pre>
+        <div class="grid" id="counts"></div>
+      </div>
+    </section>
+
+    <!-- Charts -->
+    <section id="charts">
+      <div class="card">
+        <h3>Category Distribution</h3>
+        <canvas id="categoryPie"></canvas>
+      </div>
+      <div class="card">
+        <h3>Sentiment Counts</h3>
+        <canvas id="sentimentBar"></canvas>
+      </div>
+    </section>
+
+    <!-- Table -->
+    <section id="table">
+      <div class="card">
+        <h3>Classified Reviews</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Rating</th>
+              <th>Category</th>
+              <th>Sentiment</th>
+              <th>Review</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
+
