@@ -132,6 +132,10 @@ Generated files:
 - This Flask server is for development only (not for production use).  
 
 ---
+## Demo Video
+
+[Watch the demo](demo.mp4)
+
 
 ## License
 
