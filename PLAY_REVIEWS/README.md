@@ -135,7 +135,12 @@ Generated files:
 ## Demo Video
 
 [Watch the demo](demo.mp4)
+## Demo Screenshot
 
+![Dashboard Screenshot](img3.png)
+![Dashboard Screenshot](img1.png)
+![Dashboard Screenshot](img2.png)
+![Dashboard Screenshot](img4.png)
 
 ## License
 
